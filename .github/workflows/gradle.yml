@@ -19,8 +19,8 @@ jobs:
         java-version: '11'
         distribution: 'temurin' 
     - name: Run Jar File
-      run: java -jar ./artifacts/app-CardOrder.jar
-    - name: Change wrapper permissions
+      run: java -jar ./artifacts/app-CardOrder.jar &
+    - name: Change wrapper permissions 
       run: chmod +x ./gradlew
     - name: Build with Gradle
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
